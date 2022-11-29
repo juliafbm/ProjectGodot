@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Coins Shuffling.mp3-dda1d9b266347d69335ea16e260b3cf3.mp3str"
+
+[deps]
+
+source_file="res://Sound/Coins Shuffling.mp3"
+dest_files=[ "res://.import/Coins Shuffling.mp3-dda1d9b266347d69335ea16e260b3cf3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

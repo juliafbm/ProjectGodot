@@ -1,0 +1,199 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/Box.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Bloco.png" type="Texture" id=2]
+[ext_resource path="res://Cenas/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Cenas/Bau.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Cenas/Coin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sound/Swinging Pants.ogg" type="AudioStream" id=7]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "Box.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Bloco.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 32, 32 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 1 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Bloco.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 32 )
+2/tile_mode = 2
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 32, 32 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Bloco.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+
+[node name="Fase1" type="Node2D"]
+
+[node name="Bloco" type="TileMap" parent="." groups=["bloco"]]
+position = Vector2( -1, 0 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 32
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0, 19, 1, 0, 20, 1, 0, 21, 1, 0, 22, 1, 0, 23, 1, 0, 24, 1, 0, 25, 1, 0, 26, 1, 0, 27, 1, 0, 28, 1, 0, 29, 1, 0, 30, 1, 0, 31, 1, 0, 65536, 1, 0, 65537, 1, 0, 65541, 1, 0, 65542, 1, 0, 65546, 1, 0, 65547, 1, 0, 65551, 1, 0, 65552, 1, 0, 65556, 1, 0, 65557, 1, 0, 65561, 1, 0, 65567, 1, 0, 131072, 1, 0, 131073, 1, 0, 131077, 1, 0, 131078, 1, 0, 131087, 1, 0, 131088, 1, 0, 131097, 1, 0, 131103, 1, 0, 196608, 1, 0, 196609, 1, 0, 196613, 1, 0, 196614, 1, 0, 196618, 1, 0, 196619, 1, 0, 196623, 1, 0, 196624, 1, 0, 196628, 1, 0, 196629, 1, 0, 196633, 1, 0, 196636, 1, 0, 196639, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262149, 1, 0, 262150, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262159, 1, 0, 262160, 1, 0, 262161, 1, 0, 262164, 1, 0, 262165, 1, 0, 262169, 1, 0, 262172, 1, 0, 262173, 1, 0, 262175, 1, 0, 327680, 1, 0, 327681, 1, 0, 327685, 1, 0, 327686, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327695, 1, 0, 327696, 1, 0, 327700, 1, 0, 327701, 1, 0, 327702, 1, 0, 327705, 1, 0, 327708, 1, 0, 327711, 1, 0, 393216, 1, 0, 393217, 1, 0, 393221, 1, 0, 393222, 1, 0, 393226, 1, 0, 393227, 1, 0, 393231, 1, 0, 393232, 1, 0, 393236, 1, 0, 393237, 1, 0, 393241, 1, 0, 393244, 1, 0, 393247, 1, 0, 458752, 1, 0, 458753, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458762, 1, 0, 458763, 1, 0, 458767, 1, 0, 458768, 1, 0, 458771, 1, 0, 458772, 1, 0, 458773, 1, 0, 458776, 1, 0, 458777, 1, 0, 458780, 1, 0, 458782, 1, 0, 458783, 1, 0, 524288, 1, 0, 524289, 1, 0, 524298, 1, 0, 524299, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524308, 1, 0, 524309, 1, 0, 524313, 1, 0, 524316, 1, 0, 524319, 1, 0, 589824, 1, 0, 589825, 1, 0, 589834, 1, 0, 589835, 1, 0, 589839, 1, 0, 589840, 1, 0, 589844, 1, 0, 589845, 1, 0, 589849, 1, 0, 589852, 1, 0, 589855, 1, 0, 655360, 1, 0, 655361, 1, 0, 655365, 1, 0, 655366, 1, 0, 655370, 1, 0, 655371, 1, 0, 655375, 1, 0, 655376, 1, 0, 655380, 1, 0, 655381, 1, 0, 655384, 1, 0, 655385, 1, 0, 655388, 1, 0, 655391, 1, 0, 720896, 1, 0, 720897, 1, 0, 720901, 1, 0, 720902, 1, 0, 720906, 1, 0, 720907, 1, 0, 720911, 1, 0, 720912, 1, 0, 720913, 1, 0, 720916, 1, 0, 720917, 1, 0, 720920, 1, 0, 720921, 1, 0, 720924, 1, 0, 720925, 1, 0, 720927, 1, 0, 786432, 1, 0, 786433, 1, 0, 786437, 1, 0, 786438, 1, 0, 786442, 1, 0, 786443, 1, 0, 786447, 1, 0, 786448, 1, 0, 786452, 1, 0, 786453, 1, 0, 786456, 1, 0, 786457, 1, 0, 786460, 1, 0, 786463, 1, 0, 851968, 1, 0, 851969, 1, 0, 851973, 1, 0, 851974, 1, 0, 851978, 1, 0, 851979, 1, 0, 851988, 1, 0, 851989, 1, 0, 851992, 1, 0, 851993, 1, 0, 851996, 1, 0, 851999, 1, 0, 917504, 1, 0, 917505, 1, 0, 917509, 1, 0, 917510, 1, 0, 917514, 1, 0, 917515, 1, 0, 917516, 1, 0, 917519, 1, 0, 917520, 1, 0, 917523, 1, 0, 917524, 1, 0, 917525, 1, 0, 917528, 1, 0, 917529, 1, 0, 917532, 1, 0, 917534, 1, 0, 917535, 1, 0, 983040, 1, 0, 983041, 1, 0, 983045, 1, 0, 983046, 1, 0, 983050, 1, 0, 983051, 1, 0, 983055, 1, 0, 983056, 1, 0, 983060, 1, 0, 983061, 1, 0, 983062, 1, 0, 983064, 1, 0, 983065, 1, 0, 983068, 1, 0, 983070, 1, 0, 1048576, 1, 0, 1048577, 1, 0, 1048581, 1, 0, 1048582, 1, 0, 1048586, 1, 0, 1048587, 1, 0, 1048591, 1, 0, 1048592, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048604, 1, 0, 1114112, 1, 0, 1114113, 1, 0, 1114114, 1, 0, 1114115, 1, 0, 1114116, 1, 0, 1114117, 1, 0, 1114118, 1, 0, 1114119, 1, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 1, 0, 1114143, 1, 0, 1179648, 1, 0, 1179649, 1, 0, 1179650, 1, 0, 1179651, 1, 0, 1179652, 1, 0, 1179653, 1, 0, 1179654, 1, 0, 1179655, 1, 0, 1179656, 1, 0, 1179657, 1, 0, 1179658, 1, 0, 1179659, 1, 0, 1179660, 1, 0, 1179661, 1, 0, 1179662, 1, 0, 1179663, 1, 0, 1179664, 1, 0, 1179665, 1, 0, 1179666, 1, 0, 1179667, 1, 0, 1179668, 1, 0, 1179669, 1, 0, 1179670, 1, 0, 1179671, 1, 0, 1179672, 1, 0, 1179673, 1, 0, 1179674, 1, 0, 1179675, 1, 0, 1179676, 1, 0, 1179677, 1, 0, 1179678, 1, 0, 1179679, 1, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 72, 112 )
+
+[node name="Bau" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1007, 519 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Inimigos" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Inimigos" instance=ExtResource( 3 )]
+position = Vector2( 96, 352 )
+
+[node name="Enemy2" parent="Inimigos" instance=ExtResource( 3 )]
+position = Vector2( 256, 448 )
+
+[node name="Enemy3" parent="Inimigos" instance=ExtResource( 3 )]
+position = Vector2( 396, 306 )
+
+[node name="Enemy4" parent="Inimigos" instance=ExtResource( 3 )]
+position = Vector2( 554, 208 )
+
+[node name="Enemy5" parent="Inimigos" instance=ExtResource( 3 )]
+position = Vector2( 736, 64 )
+
+[node name="Enemy6" parent="Inimigos" instance=ExtResource( 3 )]
+position = Vector2( 842, 278 )
+
+[node name="Enemy7" parent="Inimigos" instance=ExtResource( 3 )]
+position = Vector2( 949, 333 )
+
+[node name="Coletaveis" type="Node2D" parent="."]
+
+[node name="Coin" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 140, 107 )
+
+[node name="Coin2" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 110, 521 )
+
+[node name="Coin3" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 236, 209 )
+
+[node name="Coin4" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 289, 521 )
+
+[node name="Coin5" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 399, 148 )
+
+[node name="Coin6" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 463, 308 )
+
+[node name="Coin7" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 399, 490 )
+
+[node name="Coin8" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 557, 113 )
+
+[node name="Coin9" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 626, 270 )
+
+[node name="Coin10" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 561, 399 )
+
+[node name="Coin11" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 626, 529 )
+
+[node name="Coin12" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 720, 143 )
+
+[node name="Coin13" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 786, 287 )
+
+[node name="Coin14" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 718, 527 )
+
+[node name="Coin15" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 844, 122 )
+
+[node name="Coin16" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 940, 176 )
+
+[node name="Coin17" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 972, 269 )
+
+[node name="Coin18" parent="Coletaveis" instance=ExtResource( 6 )]
+position = Vector2( 941, 395 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
